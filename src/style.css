@@ -1,0 +1,25 @@
+/* src/assets/styles.css */
+
+/* src/assets/styles.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+}
