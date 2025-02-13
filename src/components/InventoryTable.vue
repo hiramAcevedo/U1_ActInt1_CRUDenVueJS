@@ -109,35 +109,74 @@ methods: {
 
 <style scoped>
 .table-container {
-max-width: 1280px;
-margin: 20px auto;
+  max-width: 1280px;
+  margin: 20px auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
+
 .inventory-table {
-width: 100%;
-border-collapse: collapse;
+  width: 100%;
+  min-width: 800px;
+  border-collapse: collapse;
 }
+
 .inventory-table th,
 .inventory-table td {
-border: 1px solid #ddd;
-padding: 8px;
-text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
 }
+
+.inventory-table input {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
 .inventory-table th {
-background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
+
 .edit-btn, .delete-btn {
-padding: 6px 10px;
-margin: 2px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+  padding: 6px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
+
 .edit-btn {
-background-color: #ffcc00;
-color: black;
+  background-color: #ffcc00;
+  color: black;
 }
+
 .delete-btn {
-background-color: #ff4d4d;
-color: white;
+  background-color: #ff4d4d;
+  color: white;
 }
-</style>  
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 10px auto;
+    padding: 0 5px;
+  }
+
+  .inventory-table th,
+  .inventory-table td {
+    padding: 6px;
+    font-size: 0.9em;
+  }
+
+  .edit-btn, .delete-btn {
+    padding: 4px 8px;
+    font-size: 0.9em;
+  }
+
+  .inventory-table input {
+    font-size: 0.9em;
+  }
+}
+</style>
